@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.blood-splash {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: url('pict/blood.png') no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    animation: splash 0s forwards;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+@keyframes splash {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    height: 75vh;
+}
+
+.poster {
+    width: 925px;
+    max-width: 990px;
+    height: 600px;
+    border-radius: 30px;
+    margin-top: 25px;    
+    position: relative; 
+    border: 5px solid rgb(122, 24, 24); 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
+    overflow: hidden; 
+    padding: 20px;
+    width: 930px;
+    max-width: 920px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.poster-container .poster:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1); 
+}
+
+.font-1{
+    position: absolute;
+    top: 11%;
+    left: 36%; 
+    transform: translate(-50%, -50%); 
+    width: 410px;
+    height: auto;
+    z-index: 10; 
+}
+
+.font-2{
+    position: absolute;
+    top: 20%;
+    left: 23%; 
+    width: 420px;
+    height: auto;
+    z-index: 10; 
+}
+
+.font-3{
+    position: absolute;
+    top: 59%;
+    left: 25%; 
+    width: 420px;
+    height: auto;
+    z-index: 10; 
+    object-fit: cover;
+}
+
+.font-4{
+    position: absolute;
+    top: 42%;
+    left: 54%; 
+    width: 320px;
+    height: auto;
+    z-index: 10; 
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.font-2, .font-3{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.font-2 { animation-delay: 1.5s; }
+.font-3 { animation-delay: 2s; }
+
+.premiere-info{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.premiere-info h2{
+    font-size: 120px;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue';
+    color: linear-gradient(white, red);
+}
+
+.premiere-info p{
+    font-size: 24px;
+    margin: 5px 0;
+    font-family: 'poppins';
+}
+
+.pesan{
+    width: 40%;
+    max-width: 230px;
+    margin-top: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.map {
+    width: 310px;
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
